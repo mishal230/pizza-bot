@@ -116,58 +116,114 @@
         <p><strong>Email:</strong> contact@pizzaVibe.com</p>
     </section>
 
-    <script type="module">
-        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-        Chatbot.init({
-            chatflowid: "37cad469-8fd0-4300-ba82-54c64a4ceb5b",
-            apiHost: "https://mishal23-hotel-backend.hf.space",
-            chatflowConfig: {
-                /* Chatflow Config */
-            },
-            observersConfig: {
-                /* Observers Config */
-            },
-            theme: {    
-                
-        "button": {
-          "backgroundColor": "grey",
-          "right": 20,
-          "bottom": 20,
-          "size": "large",
-          "iconColor": "white",
-          "customIconSrc": "chat_4519027.png"
+<script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+    Chatbot.init({
+        chatflowid: "37cad469-8fd0-4300-ba82-54c64a4ceb5b",
+        apiHost: "https://mishal23-hotel-backend.hf.space",
+        chatflowConfig: {
+            /* Chatflow Config */
         },
-        "chatWindow": {
-          "welcomeMessage": "Hello! how can i help you today.",
-          "backgroundColor": "#ffffff",
-          "height": "600",
-          "width": "380",
-          "fontSize": 16,
-          "poweredByTextColor": "#fafafa",
-          "botMessage": {
-            "backgroundColor": "#f0f0f0",
-            "textColor": "#303235",
-            "showAvatar": false,
-            "avatarSrc": "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png"
-          },
-          "userMessage": {
-            "backgroundColor": "#8a8a8a",
-            "textColor": "#ffffff",
-            "showAvatar": false,
-            "avatarSrc": "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png"
-          },
-          "textInput": {
-            "placeholder": "Type your question",
-            "backgroundColor": "#ffffff",
-            "textColor": "#303235",
-            "sendButtonColor": "#000000"
-          }
+        observersConfig: {
+            /* Observers Config */
+        },
+        theme: {
+            button: {
+                backgroundColor: '#800000',
+                right: 20,
+                bottom: 70,
+                size: 55,
+                dragAndDrop: true,
+                iconColor: 'white',
+                customIconSrc: 'message_3826641.png',
+                autoWindowOpen: {
+                    autoOpen: true,
+                    openDelay: 2,
+                    autoOpenOnMobile: false
+                }
+            },
+            tooltip: {
+                showTooltip: true,
+                tooltipMessage: 'Hi There 👋!',
+                tooltipBackgroundColor: 'grey',
+                tooltipTextColor: 'white',
+                tooltipFontSize: 16
+            },
+            disclaimer: {
+                title: 'Disclaimer',
+                message: "By using this chatbot, you agree to the <a target=\"_blank\" href=\"https://flowiseai.com/terms\">Terms & Condition</a>",
+                textColor: 'black',
+                buttonColor: '#3b82f6',
+                buttonText: 'Start Chatting',
+                buttonTextColor: 'white',
+                blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)',
+                backgroundColor: 'white'
+            },
+            customCSS: ``,
+            chatWindow: {
+                showTitle: true,
+                showAgentMessages: true,
+                title: 'Pizza Palace Bot',
+          //      titleAvatarSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+                welcomeMessage: 'Hello! how can i help you today?',
+                errorMessage: 'Oops! something went wrong',
+                backgroundColor: '#800000',
+                backgroundImage: 'pizza-pizza-filled-with-tomatoes-salami-olives.jpg',
+                height: 600,
+                width: 400,
+                fontSize: 16,
+              starterPrompts: [
+               //     "What is a bot?",
+               //     "Who are you?"
+                ],
+                starterPromptFontSize: 15,
+                clearChatOnReload: false,
+                sourceDocsTitle: 'Sources:',
+                renderHTML: true,
+                botMessage: {
+                    backgroundColor: '#800000',
+                    textColor: 'white',
+                 //   showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/parroticon.png'
+                },
+                userMessage: {
+                    backgroundColor: 'white',
+                    textColor: 'black',
+                //    showAvatar: true,
+                    avatarSrc: 'https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png'
+                },
+                textInput: {
+                    placeholder: 'Type your question',
+                    backgroundColor: '#ffffff',
+                    textColor: '#303235',
+                    sendButtonColor: '#800000',
+                    maxChars: 50,
+                    maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+                    autoFocus: true,
+                    sendMessageSound: true,
+                    sendSoundLocation: 'send_message.mp3',
+                    receiveMessageSound: true,
+                    receiveSoundLocation: 'receive_message.mp3'
+                },
+                feedback: {
+                    color: '#303235'
+                },
+                dateTimeToggle: {
+                    date: true,
+                    time: true
+                },
+                footer: {
+                    textColor: 'white',
+                    text: 'Pizza Palace',
+                    company: '',
+                    companyLink: ''
+                }
+            }
         }
-      }
     })
 </script>
-       <footer>
-        <p>&copy; 2025 Pizza Palace. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Pizza Palace. All rights reserved.</p>
+</footer>
 </body>
 </html>
